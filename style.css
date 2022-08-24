@@ -89,14 +89,38 @@
 
 .owl-dots {
     width: 100%;
-    text-align: center;
+    text-align: right !important;
     position: absolute;
     bottom: 1%;
+    right: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .owl-dots {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        bottom: 20px;  
+    }
+}
+@media only screen and (max-width: 425px) {
+    .owl-dots {
+        right: 13px;  
+    }
 }
 
 .owl-dots span {
-    width: 13px !important;
-    height: 13px !important;
+    width: 15px !important;
+    height: 15px !important;
+}
+
+.owl-theme .owl-dots .owl-dot span{
+    background: rgba(0, 0, 0, 0.26);
+}
+
+.owl-theme .owl-dots .owl-dot.active span{
+    background: #000000 !important;
 }
 
 .owl-dots button {
@@ -104,12 +128,16 @@
     outline: none !important;
 }
 
-.owl-nav button {
+.owl-nav{
+    display: none;
+    margin: 0;
+}
+/* .owl-nav button {
     border: none !important;
     outline: none !important;
-}
+} */
 
-.owl-prev, .owl-next {
+/* .owl-prev, .owl-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -125,4 +153,4 @@
 
 .owl-next {
     right: 1%;
-}
+} */
